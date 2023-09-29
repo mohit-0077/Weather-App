@@ -5,6 +5,9 @@ const searchBtn = document.querySelector('.search button');
 const toggleTemp = document.querySelector('.parentTemp button');
 const apiErrorDiv = document.getElementById("api-error");
 const weatherDisplay = document.querySelector('.weather');
+let locationButton = document.getElementById("get-location");
+let locationDiv = document.getElementById("location-details");
+const locationErrorDiv = document.getElementById("location-error");
 
 var units = "metric";
 var city = "";
@@ -17,11 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchBtn.addEventListener('click', () => {
         getWeather(searchBox.value, units);
+        searchBox.value = "";
     });
 
     searchBox.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             getWeather(searchBox.value, units);
+            searchBox.value = "";
         }
     });
 
@@ -99,9 +104,6 @@ async function getWeather(city, units) {
 }
 
 
-let locationButton = document.getElementById("get-location");
-let locationDiv = document.getElementById("location-details");
-const locationErrorDiv = document.getElementById("location-error");
 
 const checkError = (error) => {
     apiErrorDiv.style.display = 'none';
