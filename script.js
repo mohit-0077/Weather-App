@@ -82,7 +82,7 @@ async function getWeather(city, units) {
         var iconCode = data.weather[0].icon;
         weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
         weatherDisplay.style.display = 'block';
-        cardMain.style.height = '80%';
+        cardMain.style.height = '75%';
         console.log(data);
     } catch (error) {
 
