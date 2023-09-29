@@ -5,7 +5,6 @@ const searchBtn = document.querySelector('.search button');
 const toggleTemp = document.querySelector('.parentTemp button');
 const apiErrorDiv = document.getElementById("api-error");
 const weatherDisplay = document.querySelector('.weather');
-const cardMain = document.querySelector('.card');
 
 var units = "metric";
 var city = "";
@@ -64,7 +63,6 @@ async function getWeather(city, units) {
 
     apiErrorDiv.style.display = 'none';
     weatherDisplay.style.display = 'none';
-    cardMain.style.height = 'auto';
     locationErrorDiv.style.display = 'none';
 
     try {
@@ -82,7 +80,6 @@ async function getWeather(city, units) {
         var iconCode = data.weather[0].icon;
         weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
         weatherDisplay.style.display = 'block';
-        cardMain.style.height = '75%';
         console.log(data);
     } catch (error) {
 
@@ -109,7 +106,6 @@ const locationErrorDiv = document.getElementById("location-error");
 const checkError = (error) => {
     apiErrorDiv.style.display = 'none';
     weatherDisplay.style.display = 'none';
-    cardMain.style.height = 'auto';
     locationErrorDiv.style.display = 'none';
     switch (error.code) {
         case error.PERMISSION_DENIED:
