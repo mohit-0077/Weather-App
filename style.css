@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1560017896-a6bf1e2acfb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80");
+    background-image: url("https://images.unsplash.com/photo-1582720934631-9608d7586154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #0d103a;
+}
+
+header {
+    width: auto !important;
+    text-align: center;
+    margin-top: 40px;
+    color: #ebfffc;
+    text-decoration: solid white;
+    text-decoration: wavy;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+
+    color: #fff;
+    margin: 10px auto 0;
+    border-radius: 20px;
+    padding: 30px 35px;
+    padding-right: -5px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(61, 99, 129, 0.37);
+    scroll-behavior: smooth;
+    height: auto;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+
+}
+
+.card::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.search {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.search input {
+    width: 85%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 15px;
+    flex: 1;
+    margin-right: 16px;
+    padding: 10px 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    outline: #ebfffc;
+    outline-style: inset;
+
+
+
+  /* Set up the hover */
+  /* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
+  background-image: linear-gradient(gray, gray), linear-gradient(silver, silver);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out;
+}
+
+.search input:hover {
+  /* The following line makes the underline only as wide as the text */
+  /* background-size: calc(100% - 2em) 5px, auto; */
+  background-size: 100% 5px, auto;
+}
+
+
+.search input::placeholder {
+    color: #dddddd;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 15px;
+    width: 30%;
+    height: 50px;
+    cursor: pointer;
+    outline: auto;
+    outline-color: #ebfffc;
+    outline-style: outset;
+    transition: 0.3s ease-in;
+}
+
+.search button:hover {
+    color: #252121;
+    background-color: #ffffff;
+    /* transition: 0.3s; */
+}
+
+#location-details {
+    display: block;
+    padding-top: 7px;
+    margin-right: 57%;
+    color: #ebfffc;
+    cursor: pointer;
+}
+
+#get-location {
+    color: #ebfffc;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#location-details:hover {
+    transform: scale(1.1);
+}
+
+.weather {
+    display: none;
+}
+
+.locDetails {
+    margin-top: 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.weather-icon {
+    width: 160px;
+    margin-top: -15px;
+    margin-bottom: -25px;
+    transition: 0.3s ease-in-out;
+}
+
+.weather-icon:hover {
+    transform: rotate(-4deg) skewX(3deg) scale(1.15);
+}
+
+.parentTemp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather h1 {
+    font-size: 65px;
+    font-weight: 500;
+    padding-right: 10%;
+}
+
+.parentTemp button {
+    color: #ebfffc;
+    background-color: transparent;
+    cursor: pointer;
+    border: #ffffff;
+    height: 35px;
+    width: 35px;
+    font-weight: bold;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+
+.parentTemp button:hover {
+    transform: scale(1.2);
+}
+
+.weather h2 {
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 26px;
+    margin-top: -6px;
+}
+
+.wind {
+    font-size: 25px;
+    margin-top: -6px;
+}
+
+.error img {
+    width: 260px;
+    padding-bottom: 20px;
+}
+
+.error {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 24px;
+    display: none;
+}
+
+.no-city {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 24px;
+    display: none;
+}
+
+
+.slider-green .round {
+    border-radius: 34px;
+}
+
+.slider-green .round:before {
+    border-radius: 50%;
+}
+
+.loading {
+    display: none;
+    position: relative;
+    top: 90%;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.loading img {
+    width: 220px;
+}
