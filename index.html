@@ -4,39 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather App</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="keywords" content="Weather App, HTML, CSS, JavaScript">
+    <meta name="description" content="Free Weather Web App">
+    <meta name="author" content="Mohit">
+    <meta http-equiv="refresh" content="200">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+    <header>Weather App</header>
+
     <div class="card">
         <div class="search">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Search for a city" spellcheck="false" />
+            <input class="searchInput" type="text" placeholder="Enter City Name" spellcheck="false" />
             <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                Get weather
             </button>
         </div>
         <div id="location-details">
             <i class="fa-solid fa-location"></i>
             <button id="get-location">Your Location</button>
         </div>
-        <div class="error">
-            <img src="images/location_not_found.png">
-            <p>City not Found :(</p>
+
+        <div class="loading">
+            <img src="images/BarLine Loading Images Gif Animation.gif" alt="Loading...">
         </div>
+
         <div class="no-city">
-            <p>Enter a City name :/</p>
+            <p>Enter a City name </p>
         </div>
+        <div id="location-error" class="error" style="display: none;">
+            Location access is required to fetch weather data.
+        </div>
+        <div id="api-error" class="error" style="display: none;"></div>
+
         <div class="weather">
+
+            <div class="locDetails"> City </div>
+
             <img src="" class="weather-icon">
 
             <div class="parentTemp">
                 <h1 class="temp"></h1>
-                <button>(°C ) / (°F)</button>
+                <button>
+                    <p id="CF">°F</p>
+                </button>
             </div>
 
             <h2 class="description"></h2>
@@ -62,7 +78,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
 </body>
 
