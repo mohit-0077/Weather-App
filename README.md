@@ -14,13 +14,13 @@ A simple web Weather App using HTML, CSS and Javascript that allows you to check
 
 ## Demo
 
-You can try the app live at [Weather App Demo](https://your-demo-link.com).
+You can try the app live at [Weather App Demo](https://mohit-0077.github.io/Weather-App/).
 
 ## Installation
 
 To run this app locally, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/yourusername/weather-app.git`
+1. Clone this repository: `git clone https://github.com/mohit-0077/Weather-app.git`
 2. Navigate to the project directory: `cd weather-app`
 3. Open `index.html` in your web browser.
 
