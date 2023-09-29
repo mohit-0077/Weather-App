@@ -12,15 +12,28 @@ body {
     background-image: url("https://images.unsplash.com/photo-1582720934631-9608d7586154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     overflow: hidden;
     height: 100vh;
     background-color: #0d103a;
+
+    scroll-behavior: smooth;
+    height: fit-content;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+    width: 0.2em;
 }
 
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
 header {
     width: auto !important;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 4%;
     color: #ebfffc;
     text-decoration: solid white;
     text-decoration: wavy;
@@ -37,6 +50,7 @@ header {
     border-radius: 20px;
     padding: 30px 35px;
     padding-right: -5px;
+    margin-bottom: 50px;
     text-align: center;
     background: rgba(10, 10, 10, 0.23);
     border-radius: 16px;
@@ -45,11 +59,10 @@ header {
     -webkit-backdrop-filter: blur(9.5px);
     border: 1px solid rgba(61, 99, 129, 0.37);
     scroll-behavior: smooth;
-    height: auto;
+    height: fit-content;
     overflow-y: scroll;
     scrollbar-color: transparent transparent;
     scrollbar-width: thin;
-
 }
 
 .card::-webkit-scrollbar {
@@ -258,7 +271,6 @@ header {
     font-size: 24px;
     display: none;
 }
-
 
 .slider-green .round {
     border-radius: 34px;
